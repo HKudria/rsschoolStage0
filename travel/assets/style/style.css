@@ -3,47 +3,58 @@
     src: url(../../assets/font/RedHatText-VariableFont_wght.ttf) format("truetype");
 }
 
-body{
+@font-face {
+    font-family: "Aleo";
+    src: url(../../assets/font/Aleo-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Aleo-normal";
+    src: url(../../assets/font/Aleo-Regular.ttf) format("truetype");
+}
+
+body {
     width: 1440px;
     margin: auto;
 }
 
-header{
+header {
     height: 765px;
     background: url("../../public/img/garrett-parker-DlkF4-dbCOU-unsplash 1.png");
 }
 
-nav{
+nav {
     height: 90px;
     display: flex;
     background: rgba(242, 120, 92, 0.7);
-    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+    box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
 }
 
-nav .logo, .login-button{
+nav .logo, .login-button {
     width: 25%;
 }
 
-.logo img{
+.logo img {
     padding-left: 120px;
     padding-top: 25px;
 }
 
-.navigation-link{
+.navigation-link {
     width: 50%;
 }
-.navigation-link ul{
+
+.navigation-link ul {
     width: fit-content;
     padding-top: 35px;
     margin: auto;
 }
 
-.navigation-link li{
+.navigation-link li {
     display: inline-block;
     margin-right: 42px;
 }
 
-.navigation-link li a{
+.navigation-link li a {
     text-decoration: none;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
@@ -54,20 +65,127 @@ nav .logo, .login-button{
     color: #FFFFFF;
 }
 
-.login-button{
+.login-button {
     display: flex;
     justify-content: center;
 }
 
-.login-button .login{
-    width: 103px;
-    height: 41px;
+button {
     background: #0D606F;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     color: #FFFFFF;
-    margin-top: 25px;
     border: none;
+}
+
+.login-button button {
+    width: 103px;
+    height: 41px;
+    margin-top: 25px;
+}
+
+.head-content {
+    margin-left: 120px;
+    margin-top: 32px;
+    width: 892px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.head-content .main-text {
+    display: block;
+    font-size: 80px;
+    line-height: 96px;
+    font-family: 'Aleo-normal', sans-serif;
+}
+
+.head-content .description-text {
+    display: block;
+    margin-top: 33px;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Aleo', sans-serif;
+}
+
+.search-bar {
+    height: 95px;
+    width: 892px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    margin-top: 46px;
+    display: flex;
+}
+
+.search-bar button {
+    float: right;
+    width: 228px;
+    height: 59px;
+    margin: 18px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.search-bar span {
+    display: block;
+    width: 100%;
+    height: 32px;
+    margin-left: 41px;
+    margin-top: 32px;
+    color: #F2785C;
+    font-family: 'Aleo', sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.steps-main-block {
+    margin: 80px auto 0;
+    width: 1177px;
+}
+
+
+h2 {
+    display: block;
+    text-align: center;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 40px;
+    line-height: 53px;
+    font-weight: 500;
+    color: #F2785C;
+    height: 53px;
+}
+
+.steps {
+    display: flex;
+    margin: 40px auto 0;
+}
+
+.steps-frame {
+    width: 100%;
+    text-align: center;
+    font-family: 'Aleo-normal', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+.icon-frame {
+    margin: 0 auto 30px;
+    width: 100px;
+    height: 100px;
+    background-color: #F2785C;
+    border-radius: 16px;
+}
+
+.icon-frame img{
+    margin: 50% 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 45px;
 }
 
 
