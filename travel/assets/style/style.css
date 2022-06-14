@@ -92,11 +92,13 @@ button {
     font-weight: 700;
 }
 
-.head-content .main-text {
+.head-content h1 {
     display: block;
     font-size: 80px;
     line-height: 96px;
     font-family: 'Aleo-normal', sans-serif;
+    font-weight: 700;
+
 }
 
 .head-content .description-text {
@@ -152,7 +154,6 @@ h2 {
     font-family: 'Red Hat Text', sans-serif;
     font-size: 40px;
     line-height: 53px;
-    font-weight: 500;
     color: #F2785C;
     height: 53px;
 }
@@ -187,5 +188,73 @@ h2 {
     width: 60px;
     height: 45px;
 }
+
+.destination-block{
+    margin-top: 89px;
+    overflow: hidden;
+}
+
+.destination-frame{
+    display: flex;
+    justify-content: center;
+}
+
+.destination-section span{
+    position: absolute;
+    bottom: 40px;
+    padding-left: 45px;
+    color: #FFFFFF;
+    font-family: 'Red Hat Text',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    text-transform: uppercase;
+}
+
+.destination-frame img{
+    margin: 0 30px 24px;
+}
+
+.destination-nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.destination-nav .active{
+    background-color: #F2785C
+}
+
+.destination-nav a{
+    background-color: rgba(242, 120, 92, 0.5);
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin: 0 5px;
+}
+
+.destination-block button{
+    display: block;
+    margin: 40px auto 0;
+    height: 59px;
+    width: 228px;
+}
+
+.destination-block button span{
+    display: flex;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    justify-content: center;
+}
+
+.destination-block button span img{
+    margin-right: 10px;
+}
+
+
 
 
