@@ -14,18 +14,20 @@
 }
 
 body {
-    width: 1440px;
+    max-width: 1440px;
     margin: auto;
+    position: relative;
 }
 
-header {
-    height: 765px;
-    background: url("../../public/img/garrett-parker-DlkF4-dbCOU-unsplash 1.png");
+.preview{
+    position: relative;
+    top:-90px;
 }
 
 nav {
     height: 90px;
     display: flex;
+    width: 100%;
     background: rgba(242, 120, 92, 0.7);
     box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
 }
@@ -84,24 +86,30 @@ button {
     margin-top: 25px;
 }
 
-.head-content {
+.preview{
+    height: 765px;
+    background: url("../../public/img/garrett-parker-DlkF4-dbCOU-unsplash 1.png");
+    z-index: -1;
+}
+.preview-content {
     margin-left: 120px;
-    margin-top: 32px;
     width: 892px;
     color: #fff;
     font-weight: 700;
 }
 
-.head-content h1 {
+h1 {
     display: block;
     font-size: 80px;
     line-height: 96px;
     font-family: 'Aleo-normal', sans-serif;
     font-weight: 700;
+    margin-top: 0;
+    padding-top: 132px;
 
 }
 
-.head-content .description-text {
+.preview-content .description-text {
     display: block;
     margin-top: 33px;
     font-size: 20px;
@@ -142,8 +150,8 @@ button {
     font-weight: 500;
 }
 
-.steps-main-block {
-    margin: 80px auto 0;
+.steps {
+    margin: auto;
     width: 1177px;
 }
 
@@ -158,7 +166,7 @@ h2 {
     height: 53px;
 }
 
-.steps {
+.steps-main-block {
     display: flex;
     margin: 40px auto 0;
 }
@@ -189,7 +197,7 @@ h2 {
     height: 45px;
 }
 
-.destination-block{
+.destination{
     margin-top: 89px;
     overflow: hidden;
 }
@@ -199,10 +207,14 @@ h2 {
     justify-content: center;
 }
 
+.destination-section{
+    position: relative;
+}
+
 .destination-section span{
     position: absolute;
-    bottom: 40px;
-    padding-left: 45px;
+    bottom: 64px;
+    left: 45px;
     color: #FFFFFF;
     font-family: 'Red Hat Text',sans-serif;
     font-style: normal;
@@ -233,15 +245,15 @@ h2 {
     border-radius: 50px;
     margin: 0 5px;
 }
-
-.destination-block button{
+.button-arrow{
     display: block;
-    margin: 40px auto 0;
+    margin: 40px auto 5px;
+    padding: 0 32px;
     height: 59px;
-    width: 228px;
 }
 
-.destination-block button span{
+
+.button-arrow span{
     display: flex;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
@@ -251,8 +263,110 @@ h2 {
     justify-content: center;
 }
 
-.destination-block button span img{
+.button-arrow span img{
     margin-right: 10px;
+}
+
+.story-fill{
+    background-color: rgba(255, 255, 255, 0.7);
+    top: -61px;
+    position: relative;
+}
+
+.story-block{
+    position: relative;
+    margin: auto;
+    width: 1201px;
+    top: -41px;
+}
+
+.story-block-section{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.story-block-section section{
+    max-height: 250px;
+    margin: 15px 0;
+}
+
+.story-block-section section p{
+    font-family: 'Aleo-normal', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+    margin: 24px 0 0;
+}
+
+h3{
+    margin: 0;
+    font-family: 'Aleo-normal', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    color: #0D606F;
+
+}
+
+.story-block-section img{
+    float: left;
+    margin-right: 40px;
+    max-height: 250px;
+}
+
+.story-block-section a{
+    font-family: 'Aleo-normal', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+    margin: 24px 0 0;
+}
+
+.story-block button{
+    margin-top: 25px;
+}
+
+.stories {
+    background: url("../../public/img/footer.svg") no-repeat no-repeat center;
+    background-size: cover;
+    margin-top: 167px;
+}
+footer{
+    display: flex;
+    position: absolute;
+    bottom: 9px;
+    left: 590px;
+    height: 34px;
+    font-family: 'Red Hat Text',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+footer ul {
+    margin: 0;
+}
+
+footer li {
+    display: inline-block;
+}
+
+footer li a {
+    text-decoration: none;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #FFFFFF;
 }
 
 
