@@ -13,6 +13,10 @@
     src: url(../../assets/font/Aleo-Regular.ttf) format("truetype");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     max-width: 1440px;
     width: 100%;
@@ -28,28 +32,26 @@ body {
 nav {
     height: 90px;
     display: flex;
-    width: 100%;
     background: rgba(242, 120, 92, 0.7);
-    box-shadow: 0 4px 4px rgba(13, 96, 111, 0.5);
-}
-
-nav .logo, .login-button {
-    width: 25%;
+    box-shadow: 0 4px 4px rgb(13 96 111 / 50%);
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+    z-index: 1;
 }
 
 .logo img {
-    padding-left: 120px;
-    padding-top: 25px;
+    height: 30px;
 }
 
-.navigation-link {
-    width: 50%;
-}
-
-.navigation-link ul {
-    width: fit-content;
-    padding-top: 35px;
-    margin: auto;
+.logo span {
+    font-family: 'Magra', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
 }
 
 .navigation-link li {
@@ -68,6 +70,10 @@ nav .logo, .login-button {
     color: #FFFFFF;
 }
 
+.navigation-link li a:hover{
+    text-decoration: underline;
+}
+
 .login-button {
     display: flex;
     justify-content: center;
@@ -81,21 +87,24 @@ button {
     border: none;
 }
 
+button:hover{
+    background: #3d4245;
+    cursor:pointer;
+}
+
 .login-button button {
     width: 103px;
     height: 41px;
-    margin-top: 25px;
 }
 
 .preview {
     height: 765px;
     background: url("../../public/img/header.jpg");
-    z-index: -1;
+    display: flex;
 }
 
 .preview-content {
-    margin-left: 120px;
-    width: 100%;
+    padding-left: 120px;
     max-width: 892px;
     color: #fff;
     font-weight: 700;
@@ -107,8 +116,8 @@ h1 {
     line-height: 96px;
     font-family: 'Aleo-normal', sans-serif;
     font-weight: 700;
-    margin-top: 0;
-    padding-top: 132px;
+    margin: 0;
+    padding-top: 123px;
 
 }
 
@@ -122,8 +131,6 @@ h1 {
 
 .search-bar {
     height: 95px;
-    width: 100%;
-    max-width: 892px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     margin-top: 46px;
@@ -131,14 +138,14 @@ h1 {
 }
 
 .search-bar button {
-    float: right;
-    width: 228px;
-    height: 59px;
     margin: 18px;
     font-family: 'Red Hat Text', sans-serif;
     font-size: 24px;
     line-height: 32px;
     font-weight: 500;
+    padding: 0 38px;
+    width: 100%;
+    max-width: fit-content;
 }
 
 .search-bar span {
@@ -155,10 +162,7 @@ h1 {
 }
 
 .steps {
-    margin: auto;
-    max-width: 1177px;
-    width: 100%;
-    display: contents;
+    margin: -40px 0;
 }
 
 
@@ -174,7 +178,7 @@ h2 {
 
 .steps-main-block {
     display: flex;
-    margin: 40px auto 0;
+    margin: 38px 35px 0;
     justify-content: space-around;
 }
 
@@ -204,11 +208,12 @@ h2 {
 }
 
 .destination {
-    margin-top: 89px;
+    margin-top: 100px;
     overflow: hidden;
 }
 
 .destination-frame {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -252,6 +257,10 @@ h2 {
     margin: 0 5px;
 }
 
+.destination-nav a:hover{
+    transform: translate(0, -3px);
+}
+
 .button-arrow {
     display: block;
     margin: 40px auto 5px;
@@ -289,7 +298,7 @@ h2 {
 }
 
 .story-block-section {
-    margin-top: 80px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
 }
@@ -342,15 +351,13 @@ h3 {
 .stories {
     background: url("../../public/img/footer.jpg") no-repeat no-repeat center;
     background-size: cover;
-    margin-top: 167px;
+    margin-top: 170px;
 }
 
 footer {
     display: flex;
-    flex-direction: row;
     position: absolute;
     bottom: 9px;
-    left: 590px;
     height: 34px;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
@@ -358,10 +365,17 @@ footer {
     font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 footer ul {
-    margin: 0;
+    margin: 0 125px;
+}
+
+footer img:hover{
+    transform: translate(0, -3px);
 }
 
 footer li {
@@ -377,9 +391,6 @@ footer li img {
     filter: invert(1);
 }
 
-footer span{
-    margin: auto;
-}
 
 
 
