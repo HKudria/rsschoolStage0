@@ -17,6 +17,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 .new-line{
     display: none;
 }
@@ -613,8 +614,9 @@ footer li img {
 
     .destination-frame img {
         margin: 0 15px;
-        width: 360px;
+        width: calc(100vw - 30px);
         height: 210px;
+        object-fit: cover;
         border-radius: 20px;
     }
 
@@ -623,6 +625,25 @@ footer li img {
         top: 8px;
         font-size: 20px;
         line-height: 26px;
+    }
+
+    .button-arrow{
+        padding: 8px 12px;
+        height: auto;
+        margin-top: 22px;
+    }
+
+    .button-arrow span{
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .button-arrow span img{
+        margin: auto;
+        padding-right: 10px;
+        width: 10px;
+        height: 10px;
+        object-fit: contain;
     }
 
     .destination-nav {
@@ -635,6 +656,73 @@ footer li img {
         height: 8px;
         width: 8px;
         margin: 0 3px;
+    }
+
+    .stories{
+        background: url(../../public/img/footer-small.jpg) no-repeat no-repeat center;
+        background-size: cover;
+        margin-top: 43px;
+        padding-bottom: 65px;
+    }
+
+    .story-fill{
+        top: 0;
+    }
+.story-block{
+    top: -30px;
+}
+    .story-block button {
+        margin-top: 0;
+        margin-bottom: -20px
+    }
+    .story-block-section{
+        margin-top: 15px;
+    }
+
+    .story-block-section section{
+        padding: 0 15px;
+    }
+
+    .story-block-section img {
+        border-radius: 20px;
+        height: 134px;
+        width: 156px;
+        margin-right: 10px;
+        object-fit: cover;
+    }
+
+    .story-block-section  a {
+        font-size: 9px;
+        line-height: 11px;
+        position: relative;
+        top: -7px;
+    }
+
+    .story-block-section section p{
+        font-size: 9px;
+        line-height: 11px;
+        height: 88px;
+        overflow: hidden;
+        margin: 10px 0 0;
+    }
+
+    h3{
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 700;
+        padding-top: 4px;
+    }
+
+    .story-block-section section {
+        margin: 7px 0;
+    }
+
+    footer{
+        bottom: 9px;
+    }
+
+    footer ul{
+        padding: 0;
     }
 }
 
