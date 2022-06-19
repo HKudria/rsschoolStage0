@@ -456,6 +456,13 @@ footer li img {
     }
 }
 
+@media (max-width: 760px){
+    .navigation-link li a {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
 @media (max-width: 625px) {
     .search-bar span {
         font-size: 10px;
@@ -748,6 +755,12 @@ footer li img {
 
     footer ul {
         padding: 0;
+    }
+    .order1{
+        order: 1;
+    }
+    .order2{
+        order: 2;
     }
 }
 
