@@ -41,6 +41,10 @@ nav {
     z-index: 1;
 }
 
+.responsive-nav{
+    display: none;
+}
+
 .logo img {
     height: 30px;
 }
@@ -484,6 +488,50 @@ footer li img {
 }
 
 @media (max-width: 390px) {
+
+    h1, .description-text, nav span, .navigation-link, .login-button,  footer span{
+        display: none !important;
+    }
+
+    nav{
+        background: none;
+        box-shadow: none;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+
+    .preview{
+        height: 251px;
+        background-size: cover;
+        background: url("../../public/img/header-small.jpg");
+    }
+
+    .preview-content{
+        width: 100%;
+    }
+
+    .search-bar{
+        margin-top: 142px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search-bar span {
+        display: block;
+         width: auto;
+         height: auto;
+        margin: 0 0 0 16px;
+        font-size: 14px;
+    }
+
+    .search-bar button {
+        font-size: 11px;
+        margin: 9px;
+        padding: 8px 9px;
+        height: auto;
+        line-height: 14px;
+    }
+
     .steps-frame-center {
         margin: 0;
         justify-content: center;
@@ -517,6 +565,13 @@ footer li img {
         justify-content: flex-end;
         text-align: right;
     }
+
+    .responsive-nav{
+        display: block;
+        width: 35px;
+        height: 32px;
+    }
+
 }
 
 
