@@ -17,6 +17,11 @@ html {
     scroll-behavior: smooth;
 }
 
+
+.new-line {
+    display: none;
+}
+
 body {
     max-width: 1440px;
     width: 100%;
