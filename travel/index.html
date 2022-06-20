@@ -10,7 +10,7 @@
     <title>Travel Portal</title>
 </head>
 <body>
-<header>
+<header >
     <nav>
         <div class="logo">
             <img src="./public/img/travel.svg" alt="logo">
@@ -27,10 +27,27 @@
         <div class="login-button">
             <button>Login</button>
         </div>
-        <div class="responsive-nav">
-            <img src="./public/img/responsive_nav.svg" alt="logo">
+        <div class="responsive-nav" >
+            <img src="./public/img/responsive_nav.svg" alt="logo" id="openBurgerMenu">
         </div>
     </nav>
+    <div class="burger-menu" id="body">
+        <div class="menu" id="burgerMenu">
+            <img src="./public/img/close.svg" alt="closeMenu" class="closeButton" id="closeBurgerMenu">
+            <nav class="burgerNavigation">
+            <ul>
+                <li><a href="#howItWorks">how it works</a></li>
+                <li><a href="#planYouTrip">plan you trip</a></li>
+                <li><a href="#destinations">destinations</a></li>
+                <li><a href="#travelStories">travel stories</a></li>
+                <li><a href="#">account</a></li>
+                <li><a href="#socMedia">Social media</a></li>
+            </ul>
+            </nav>
+        </div>
+
+    </div>
+    <script src="./assets/js/burgerMenu.js"></script>
 </header>
 <main>
     <section class="preview" id="howItWorks">
@@ -169,7 +186,7 @@
         </div>
     </section>
 </main>
-<footer>
+<footer id="socMedia">
     <span>All Rights Reserved © Travel Portal</span>
     <ul>
         <li><a href="https://github.com/HKudria"><img src="public/img/github-icon.svg" alt="github" class="invert"></a></li>

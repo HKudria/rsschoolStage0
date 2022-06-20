@@ -18,7 +18,7 @@ html {
 }
 
 
-.new-line, .destination-navigation {
+.new-line, .destination-navigation, .burger-menu {
     display: none;
 }
 
@@ -27,6 +27,7 @@ body {
     width: 100%;
     margin: auto;
     position: relative;
+    background: #E5E5E5;
 }
 
 .preview {
@@ -506,6 +507,76 @@ footer li img {
 
     body {
         border-radius: 15px;
+    }
+
+    .burger-menu{
+        display: none;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        right: 0;
+        top:0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .burgerNavigation{
+        position: absolute;
+        top:0;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .burgerNavigation ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 0 27px;
+    }
+
+    .burgerNavigation li{
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
+    .burgerNavigation li a{
+        text-align: right;
+        text-decoration: none;
+        font-family: 'Red Hat Text', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        padding: 0;
+    }
+
+    .menu{
+        width: 165px;
+        height: 250px;
+        background: #F2785C;
+        box-shadow: 0 4px 3px rgba(13, 96, 111, 0.25);
+        border-radius: 10px;
+        transition: 1s;
+        transform: translateX(100%);
+        position: fixed;
+        right: 0;
+    }
+
+    .menu.open{
+        transform: translateX(0%);
+        transition-property: transform;
+    }
+
+    .closeButton{
+        width: 15px;
+        height: 15px;
+        padding: 8px 8px;
+        margin: 8px;
+    }
+
+    .burger-menu.show{
+        display: flex;
     }
 
     h1, .description-text, nav span, .navigation-link, .login-button, footer span {
