@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="public/img/favicon.ico">
     <link rel="stylesheet" href="./assets/style/style.css">
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/carousel.js"></script>
     <title>Travel Portal</title>
 </head>
 <body>
@@ -80,28 +81,28 @@
     </section>
     <section class="destination" id="destinations">
         <div class="destination-navigation">
-            <img src="public/img/nav-arrow-left.svg" alt="slideLeft">
-            <img src="public/img/nav-arrow-right.svg" alt="slideRight">
+            <img src="public/img/nav-arrow-left.svg" alt="slideLeft" id="#arrow-left">
+            <img src="public/img/nav-arrow-right.svg" alt="slideRight" id="#arrow-right">
         </div>
         <h2>POPULAR DESTINATIONS</h2>
-        <div class="destination-frame">
-            <div class="destination-section order1">
+        <div class="destination-frame" id="carousel">
+            <div class="destination-section order1" id="img-left">
                 <span>SPAIN</span>
-                <img src="public/img/island.jpg" alt="SPAIN">
+                <img src="public/img/island.jpg" alt="SPAIN" >
             </div>
             <div class="destination-section order2">
                 <span>japan</span>
-                <img src="public/img/japan.jpg" alt="JAPAN">
+                <img src="public/img/japan.jpg" alt="JAPAN" id="carouselData">
             </div>
-            <div class="destination-section">
+            <div class="destination-section" id="img-right">
                 <span>USA</span>
-                <img src="public/img/usa.jpg" alt="USA">
+                <img src="public/img/usa.jpg" alt="USA" >
             </div>
         </div>
         <div class="destination-nav">
-            <a href="#" class="order2"></a>
-            <a href="#" class="active order1"></a>
-            <a href="#" class="order2"></a>
+            <span id="spain"></span>
+           <span class="active" id="japan"></span>
+           <span id="usa"></span>
         </div>
         <button class="button-arrow"><span><img src="public/img/arrow.svg" alt="arrow">Find More</span></button>
     </section>
