@@ -233,6 +233,7 @@ h2 {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .destination-section {
@@ -267,7 +268,7 @@ h2 {
     background-color: #F2785C
 }
 
-.destination-nav a {
+.destination-nav span {
     background-color: rgba(242, 120, 92, 0.5);
     height: 20px;
     width: 20px;
@@ -275,7 +276,7 @@ h2 {
     margin: 0 5px;
 }
 
-.destination-nav a:hover {
+.destination-nav span:hover {
     transform: translate(0, -3px);
 }
 
@@ -468,6 +469,23 @@ footer li img {
     }
 }
 
+@media (max-width: 890px){
+    .destination-frame img {
+        margin: 0 15px 24px;
+        width: calc(100vw - 30px);
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .destination-section span {
+        left: 30px;
+        top: 8px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
 @media (max-width: 760px){
     .navigation-link li a {
         font-size: 12px;
@@ -509,9 +527,6 @@ footer li img {
         font-size: 12px;
     }
 
-    .destination-section span {
-        left: 220px;
-    }
 }
 
 @media (max-width: 390px) {
@@ -713,17 +728,7 @@ footer li img {
 
     .destination-frame img {
         margin: 0 15px;
-        width: calc(100vw - 30px);
         height: 210px;
-        object-fit: cover;
-        border-radius: 20px;
-    }
-
-    .destination-section span {
-        left: 30px;
-        top: 8px;
-        font-size: 20px;
-        line-height: 26px;
     }
 
     .button-arrow {
@@ -760,7 +765,7 @@ footer li img {
         position: relative;
     }
 
-    .destination-nav a {
+    .destination-nav span {
         height: 8px;
         width: 8px;
         margin: 0 3px;

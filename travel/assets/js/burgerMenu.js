@@ -16,7 +16,7 @@ closeBurgerMenu.addEventListener('click',closeMenu)
 body.addEventListener('click',closeMenu)
 
 function closeMenu(event){
-    if(event.target.tagName === 'DIV' || event.target.tagName === 'IMG'){
+    if(event.target.tagName === 'DIV' || event.target.tagName === 'IMG' || event.target.textContent === 'account'){
         burgerMenu.classList.remove('open')
         window.setTimeout(showMenu,800)
         function showMenu() {
