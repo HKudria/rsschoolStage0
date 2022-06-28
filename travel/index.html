@@ -10,7 +10,7 @@
     <title>Travel Portal</title>
 </head>
 <body>
-<header >
+<header>
     <nav>
         <div class="logo">
             <img src="./public/img/travel.svg" alt="logo">
@@ -27,27 +27,7 @@
         <div class="login-button">
             <button>Login</button>
         </div>
-        <div class="responsive-nav" >
-            <img src="./public/img/responsive_nav.svg" alt="logo" id="openBurgerMenu">
-        </div>
     </nav>
-    <div class="burger-menu" id="body">
-        <div class="menu" id="burgerMenu">
-            <img src="./public/img/close.svg" alt="closeMenu" class="closeButton" id="closeBurgerMenu">
-            <nav class="burgerNavigation">
-            <ul>
-                <li><a href="#howItWorks">how it works</a></li>
-                <li><a href="#planYouTrip">plan you trip</a></li>
-                <li><a href="#destinations">destinations</a></li>
-                <li><a href="#travelStories">travel stories</a></li>
-                <li><a  href="javascript:(e)=>closeMenu(e)">account</a></li>
-                <li><a href="#socMedia">Social media</a></li>
-            </ul>
-            </nav>
-        </div>
-
-    </div>
-    <script src="./assets/js/burgerMenu.js"></script>
 </header>
 <main>
     <section class="preview" id="howItWorks">
@@ -79,17 +59,13 @@
         </div>
     </section>
     <section class="destination" id="destinations">
-        <div class="destination-navigation">
-            <img src="public/img/nav-arrow-left.svg" alt="slideLeft">
-            <img src="public/img/nav-arrow-right.svg" alt="slideRight">
-        </div>
         <h2>POPULAR DESTINATIONS</h2>
         <div class="destination-frame">
-            <div class="destination-section order1">
-                <span>SPAIN</span>
-                <img src="public/img/island.jpg" alt="SPAIN">
+            <div class="destination-section">
+                <span>ISLAND</span>
+                <img src="public/img/island.jpg" alt="ISLAND">
             </div>
-            <div class="destination-section order2">
+            <div class="destination-section">
                 <span>japan</span>
                 <img src="public/img/japan.jpg" alt="JAPAN">
             </div>
@@ -99,9 +75,9 @@
             </div>
         </div>
         <div class="destination-nav">
-            <span id="spain" class="order2"></span>
-           <span class="active order1" id="japan"></span>
-           <span id="usa" class="order2"></span>
+            <a href="#"></a>
+            <a href="#" class="active"></a>
+            <a href="#"></a>
         </div>
         <button class="button-arrow"><span><img src="public/img/arrow.svg" alt="arrow">Find More</span></button>
     </section>
@@ -186,7 +162,7 @@
         </div>
     </section>
 </main>
-<footer id="socMedia">
+<footer>
     <span>All Rights Reserved © Travel Portal</span>
     <ul>
         <li><a href="https://github.com/HKudria"><img src="public/img/github-icon.svg" alt="github" class="invert"></a></li>
