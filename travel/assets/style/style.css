@@ -40,12 +40,12 @@ html {
     height: max-content;
     display: flex;
     justify-content: center;
-    
+
     flex-wrap: wrap;
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
-    
+
 }
 
 body {
@@ -579,7 +579,7 @@ footer li img {
     .steps-frame {
         font-size: 12px;
     }
-    
+
 }
 
 @media (max-width: 390px) {
