@@ -502,7 +502,7 @@ footer li img {
 }
 
 @media (max-width: 625px) {
-    .search-bar span {
+    .search-bar input {
         font-size: 10px;
     }
 
@@ -646,8 +646,7 @@ footer li img {
         align-items: center;
     }
 
-    .search-bar span {
-        display: block;
+    .search-bar input {
         width: auto;
         height: auto;
         margin: 0 0 0 16px;
