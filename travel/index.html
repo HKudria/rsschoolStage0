@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/style/style.css">
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/carousel.js"></script>
+    <script src="./assets/js/popupMenu.js"></script>
+    <script src="./assets/js/burgerMenu.js"></script>
     <title>Travel Portal</title>
 </head>
 <body>
@@ -26,7 +28,7 @@
             </ul>
         </div>
         <div class="login-button">
-            <button>Login</button>
+            <button id="popupMenu">Login</button>
         </div>
         <div class="responsive-nav" >
             <img src="./public/img/responsive_nav.svg" alt="logo" id="openBurgerMenu">
@@ -50,36 +52,40 @@
     <div class="popup">
         <div class="popup-frame">
             <h2>Log in to your account</h2>
-            <button>first</button>
-            <button>second</button>
-            <div class="lineOr"></div>
-            <form action="">
-                <label for="formEmail">E-mail</label>  <br>
-                <input type="text" name="" id="formEmail"><br>
-                <label for="formPassword">Password</label>  <br>
-                <input type="password" name="" id="formPassword"> <br>
-                <button type="submit"></button>
+            <button class="facebookButton"><img src="public/img/FacebookLogo.svg" alt="FacebookLogo">Sing In with Facebook</button>
+            <button class="googleButton"><img src="public/img/GoogleLogo.svg" alt="GoogleLogo">Sing In with Google</button>
+            <div class="lineOr">
+                <hr>
+                <span> or </span>
+                <hr>
+            </div>
+
+            <form class="popupForm">
+                <ul>
+                    <li><label for="formEmail">E-mail</label></li>
+                    <li><input type="text" id="formEmail"></li>
+                    <li><label for="formPassword">Password</label></li>
+                    <li><input type="password" id="formPassword"></li>
+                    <li><button type="submit" class="singInButton">Sing In</button></li>
+                </ul>
             </form>
             <a href="">Forgot Your Password?</a>
-            <br><hr>
-            <span>Don't have an account?</span>
-            <a href="">Register</a>
+            <hr class="betweenLinks">
+            <span>Don't have an account? <a href="#registerButton" id="registerButton">Register</a></span>
         </div>
     </div>
-    <script src="./assets/js/burgerMenu.js"></script>
 </header>
 <main>
     <section class="preview" id="howItWorks">
         <div class="preview-content">
             <h1 class="main-text">Explore the beauty of the World</h1>
-            <span class="description-text">Recieve personalized recommendations for countries, hotels, activities and more</span>
+            <span class="description-text">Receive personalized recommendations for countries, hotels, activities and more</span>
             <div class="search-bar">
                 <span>What would you like to do?</span>
                 <button>Start Planning</button>
             </div>
         </div>
     </section>
-
     <section class="steps" id="planYouTrip">
         <h2>3 STEPS TO THE PERFECT TRIP</h2>
         <div class="steps-main-block">
@@ -99,8 +105,8 @@
     </section>
     <section class="destination" id="destinations">
         <div class="destination-navigation">
-            <img src="public/img/nav-arrow-left.svg" alt="slideLeft" id="#arrow-left">
-            <img src="public/img/nav-arrow-right.svg" alt="slideRight" id="#arrow-right">
+            <img src="public/img/nav-arrow-left.svg" alt="slideLeft" id="arrow-left">
+            <img src="public/img/nav-arrow-right.svg" alt="slideRight" id="arrow-right">
         </div>
         <h2>POPULAR DESTINATIONS</h2>
         <div class="destination-frame" id="carousel">
@@ -118,13 +124,12 @@
             </div>
         </div>
         <div class="destination-nav">
-            <a href="#" class="order2"></a>
-            <a href="#" class="active order1"></a>
-            <a href="#" class="order2"></a>
+            <span id="spain" ></span>
+            <span class="active" id="japan"></span>
+            <span id="usa"></span>
         </div>
         <button class="button-arrow"><span><img src="public/img/arrow.svg" alt="arrow">Find More</span></button>
     </section>
-
     <section class="stories" id="travelStories">
         <div class=story-fill>
             <div class="story-block">

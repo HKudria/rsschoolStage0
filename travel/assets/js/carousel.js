@@ -39,8 +39,8 @@ const mediaArray = [
 
 document.addEventListener("DOMContentLoaded", function () {
     const CAROUSEL_BLOCK = document.querySelector("#carousel");
-    const BUTTON_LEFT = document.getElementById("#arrow-left");
-    const BUTTON_RIGHT = document.getElementById("#arrow-right");
+    const BUTTON_LEFT = document.querySelector("#arrow-left");
+    const BUTTON_RIGHT = document.querySelector("#arrow-right");
     const NAV_SPAIN = document.getElementById("spain");
     const NAV_JAPAN = document.getElementById("japan");
     const NAV_USA = document.getElementById("usa");
@@ -133,8 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
             isSpainActive = false;
         }
     }
-
-    console.log(mediaArray)
 
     const renderNewCarousel = () => {
         let count = 1;

@@ -17,13 +17,15 @@ html {
     scroll-behavior: smooth;
 }
 
+.show{
+    display: flex !important;
+}
 
-.new-line, .destination-navigation, .burger-menu {
+.new-line, .destination-navigation, .burger-menu, .popup{
     display: none;
 }
 
 .popup{
-    display: flex;
     position: fixed;
     background: rgba(0, 0, 0, 0.2);
     z-index: 2;
@@ -35,17 +37,154 @@ html {
 }
 
 .popup-frame{
+    padding: 25px 45px;
     max-width: 650px;
     width: 100%;
     height: max-content;
     display: flex;
-    justify-content: center;
-
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
+    box-sizing: border-box;
+    transform: translateY(-105%);
+    transition: 2s;
 
+
+}
+
+.callPopup{
+    transform: translateY(30%);
+    transition-property: all;
+}
+
+.popup-frame h2{
+    font-family: 'Aleo-normal', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+    margin: 0 0 30px;
+}
+
+.popup-frame button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 56px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 3px rgba(13, 96, 111, 0.08), 0 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 26px;
+    font-family: 'Red Hat Text',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.popup-frame button img {
+    margin-right: 15px;
+}
+
+.facebookButton{
+    background: #1877F2;
+    color: #FFFFFF;
+}
+
+.googleButton{
+    background: #FFFFFF;
+    color: #0D606F;
+}
+
+.lineOr{
+    display: flex;
+    width: 100%;
+}
+
+.lineOr hr{
+    border: 1px solid rgba(13, 96, 111, 0.5);
+    width: 100%;
+    height: 0;
+}
+
+.lineOr span{
+    padding: 0 9px;
+    font-family: 'Aleo-normal',sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+     color: rgba(13, 96, 111, 0.5);
+}
+
+.popupForm{
+    width: 100%;
+}
+
+.popupForm label{
+    font-family: 'Aleo-normal', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+    margin-bottom: 5px;
+}
+
+.popupForm input{
+    background: #FFFFFF;
+    box-shadow: inset 0 0 3px rgba(13, 96, 111, 0.08), inset 0 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    min-height: 54px;
+    margin-bottom: 20px;
+    width: 100%;
+    border:0;
+    outline:0;
+}
+
+.popupForm ul{
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.popup-frame li{
+    display: flex;
+    align-items: flex-start;
+}
+
+.popup-frame a{
+    font-family: 'Aleo-normal', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.popup-frame span{
+    font-family: 'Aleo-normal', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.betweenLinks{
+    width: 100%;
+    height: 0;
+    margin: 26px 0 20px;
+    border: 1px solid rgba(13, 96, 111, 0.5);
+    transform: rotate(0.1deg);
+}
+.singInButton{
+    margin: 5px 0 10px;
 }
 
 body {
@@ -652,10 +791,6 @@ footer li img {
         height: 15px;
         padding: 8px 8px;
         margin: 8px;
-    }
-
-    .burger-menu.show{
-        display: flex;
     }
 
     h1, .description-text, nav span, .navigation-link, .login-button, footer span {
