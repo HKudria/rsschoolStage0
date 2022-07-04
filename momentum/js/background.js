@@ -27,7 +27,7 @@ const getBgCounter = () => {
     return parseInt(localStorage.getItem('bgCounter')) || 0
 }
 
-const setBG = async () => {
+const setBG = () => {
     let bgData
 
     switch (Math.floor(getHours() / 6)) {
@@ -47,11 +47,11 @@ const setBG = async () => {
 
     if (bgData) {
         const img = new Image();
-        let parameters = await bgData.then(data => {
-            return data.photos.photo[getBgCounter()]
+        bgData.then(data => {
+        let parameters = data.photos.photo[getBgCounter()]
+            img.src = `https://live.staticflickr.com/${parameters.server}/${parameters.id}_${parameters.secret}_b.jpg`
         })
 
-        img.src = `https://live.staticflickr.com/${parameters.server}/${parameters.id}_${parameters.secret}_b.jpg`
         img.onload = () => {
             body.style.backgroundImage = `url(${img.src})`
         }
