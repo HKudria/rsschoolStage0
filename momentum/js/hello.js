@@ -6,7 +6,7 @@ const welcomeMessage = () => {
     greeting.textContent = `Good ${messages[Math.floor(getHours()/6)]}`
 }
 
-userNameInput.setAttribute('placeholder', 'your name')
+userNameInput.setAttribute('placeholder', 'name')
 
 const setLocalStorage = () => {
     let userValue = userNameInput.value.length>0?userNameInput.value:''
