@@ -1,23 +1,30 @@
 const timeRender = document.querySelector('.time')
 const dateRender = document.querySelector('.date')
 let locale = window.navigator.language.toUpperCase()
-const day = new Date().toLocaleString(locale, {day:'numeric'})
-console.log(locale)
+let currentHour = 0
 
+const getTime = () => {
+    return new Date()
+}
+
+const getHours = () => {
+    return getTime().getHours()
+}
+
+//if hour update we'll update welcome message, date and background
 const showDate = () =>{
-
-    const date = new Date()
+    currentHour = getHours()
     const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-    dateRender.textContent = date.toLocaleString(locale, options)
+    dateRender.textContent = getTime().toLocaleString(locale, options)
+    welcomeMessage()
 }
 
-const showTime = () =>{
-    const time = new Date()
-    if (day !== time.toLocaleString(window.navigator.language, {day:'numeric'})) showDate()
-    const options = {hour: 'numeric', minute: 'numeric', second: 'numeric' , hour12: false}
-    timeRender.textContent = time.toLocaleString(window.navigator.language, options)
-    setTimeout(showTime,1000)
+//every hour we check date and welcome message
+const showTime = () => {
+    if (currentHour !== getHours()) showDate()
+    const options = {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false}
+    timeRender.textContent = getTime().toLocaleString(locale, options)
+    setTimeout(showTime, 1000)
 }
 
-showTime()
-showDate()
+
