@@ -3,10 +3,10 @@ const greeting = document.querySelector('.greeting')
 
 const welcomeMessage = () => {
     const messages = ['night','morning','afternoon','evening']
-    greeting.textContent = `Good ${messages[Math.floor(getHours()/6)]}`
+    greeting.textContent = `Good ${messages[Math.floor(getHours()/6)]}, `
 }
 
-userNameInput.setAttribute('placeholder', 'name')
+userNameInput.setAttribute('placeholder', '[Enter name]')
 
 const setLocalStorage = () => {
     let userValue = userNameInput.value.length>0?userNameInput.value:''
