@@ -1,5 +1,5 @@
 const apiKeyWeather = '787add4f58135d5e11a67bc4b64a8e36'
-let city = 'Minsk'
+let city = getLocale()==='en'?'Minsk':'Минск'
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
@@ -10,16 +10,16 @@ cityInput.value = city
 
 
 const weatherError = () => {
-    weatherIcon.className = '';
-    temperature.textContent = `Sorry, server is not available`;
-    weatherDescription.textContent = `try again, later`;
-    weatherWind.textContent = `Wind speed `
-    weatherHumidity.textContent = 'Humidity ';
+    weatherIcon.className = ''
+    temperature.textContent = local.errorServer
+    weatherDescription.textContent = local.errorTry
+    weatherWind.textContent = local.wind
+    weatherHumidity.textContent = local.hum
 }
 
 const parseWeather = async () => {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${getLocale()}}&appid=${apiKeyWeather}&units=metric`)
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${getLocale()}&appid=${apiKeyWeather}&units=metric`)
         return await response.json()
     } catch (err) {
        weatherError()
@@ -35,8 +35,8 @@ const setWeather = () => {
             weatherIcon.classList.add(`owf-${data.weather[0].id}`);
             temperature.textContent = `${data.main.temp}°C`;
             weatherDescription.textContent = data.weather[0].description;
-            weatherWind.textContent = `Wind speed ${data.wind.speed} m/s`
-            weatherHumidity.textContent = 'Humidity '+ data.main.humidity;
+            weatherWind.textContent = local.wind + data.wind.speed + local.ms
+            weatherHumidity.textContent = local.hum + data.main.humidity;
         })
     }
 }
