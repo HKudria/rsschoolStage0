@@ -9,8 +9,9 @@ const galleries = {
     evening: '185118123-72157720111880160'
 }
 const setDefaultBg = () => {
-    body.style.backgroundImage = `url("assets/img/bg.jpg")`
     window.alert('Something wrong. Server isn\'t work!. Please try again later!')
+    body.style.backgroundImage = 'url("./assets/img/bg.jpg")'
+
 }
 
 const parsePhoto = async (partOfDay) => {
@@ -48,8 +49,12 @@ const setBG = () => {
     if (bgData) {
         const img = new Image();
         bgData.then(data => {
-        let parameters = data.photos.photo[getBgCounter()]
-            img.src = `https://live.staticflickr.com/${parameters.server}/${parameters.id}_${parameters.secret}_b.jpg`
+            if(!data) {
+                return null
+            } else {
+                let parameters = data.photos.photo[getBgCounter()]
+                img.src = `https://live.staticflickr.com/${parameters.server}/${parameters.id}_${parameters.secret}_b.jpg`
+            }
         })
 
         img.onload = () => {

@@ -19,7 +19,7 @@ const weatherError = () => {
 
 const parseWeather = async () => {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${locale}}&appid=${apiKeyWeather}&units=metric`)
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${getLocale()}}&appid=${apiKeyWeather}&units=metric`)
         return await response.json()
     } catch (err) {
        weatherError()
