@@ -11,7 +11,6 @@ const galleries = {
 const setDefaultBg = () => {
     window.alert('Something wrong. Server isn\'t work!. Please try again later!')
     body.style.backgroundImage = 'url("./assets/img/bg.jpg")'
-
 }
 
 const parsePhoto = async (partOfDay) => {

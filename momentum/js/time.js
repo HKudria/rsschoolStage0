@@ -1,12 +1,6 @@
 const timeRender = document.querySelector('.time')
 const dateRender = document.querySelector('.date')
 
-
-const getLocale = () => {
-    if(window.navigator.language==='ru') return 'ru'
-    return 'en'
-}
-
 const getTime = () => {
     return new Date()
 }
@@ -28,9 +22,7 @@ const showDate = () =>{
 const checkHours = () => {
     if (currentHour !== getHours()) {
         showDate()
-        document.addEventListener("DOMContentLoaded", function(event) {
-            setBG()
-        });
+        setBG()
     }
 }
 

@@ -18,7 +18,42 @@ body {
   text-align: center;
   background: center/cover, rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
-  transition: background-image 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+.checkBoxElement{
+  padding: 20px 0 20px 20px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.checkBoxElement input{
+  margin-right: 20px;
+}
+
+.checkBoxElement p{
+  margin-bottom: 10px;
+}
+
+.checkBoxElement span:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.setting{
+  transform: translateY(calc(-100% + 32px));
+  transition: all 1s;
+}
+
+.setting-show{
+  transform: translateY(0);
+}
+
+.setting img{
+  margin-top:30px;
+  height: 32px;
+  width: 32px;
 }
 
 .header {
@@ -127,6 +162,35 @@ body {
   width: 190px;
   min-height: 180px;  
   text-align: left;
+  transition: all 1s;
+}
+
+.weather-hide{
+  transform: translateX(300px);
+}
+
+.time-hide{
+  transform: translateY(-100vh);
+}
+
+.date-hide{
+  transform: translateX(-100vw);
+}
+
+.greeting-container-hide{
+  transform: translateX(100vw);
+}
+
+.footer-hide{
+  transform: translateY(100vw);
+}
+
+.player-hide{
+  transform: translateX(-100vw);
+}
+
+.player{
+  transition: all 1s;
 }
 
 .weather-error {
@@ -196,15 +260,17 @@ body {
 .time {
   min-height: 124px;
   margin-bottom: 10px;
-  font-family: 'Arial-MT';
+  font-family: 'Arial-MT',sans-serif;
   font-size: 100px;
-  letter-spacing: -4px;  
+  letter-spacing: -4px;
+  transition: all 1s;
 }
 
 .date {
   min-height: 28px;
   font-size: 24px;
   margin-bottom: 20px;
+  transition: all 1s;
 }
 
 .greeting-container {
@@ -215,6 +281,7 @@ body {
   min-height: 48px;
   width: 100vw;
   font-size: 40px;
+  transition: all 1s;
 }
 
 .greeting {
@@ -249,6 +316,7 @@ body {
   height: 30vh;
   min-height: 160px;  
   padding: 20px;
+  transition: all 1s;
 }
 
 .change-quote {
