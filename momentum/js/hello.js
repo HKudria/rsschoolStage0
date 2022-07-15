@@ -18,4 +18,3 @@ const getLocalStorage = () => {
 
 window.addEventListener('beforeunload', setLocalStorage)
 window.addEventListener('load', getLocalStorage)
-

@@ -73,6 +73,7 @@ const createPlaySong = (id) => {
     setFullSongTime()
     activeSong.volume = globalVolume
     actualSongId = id
+    actualSongTitle.textContent = musicList[actualSongId]
     paused()
 }
 

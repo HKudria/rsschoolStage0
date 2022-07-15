@@ -128,7 +128,3 @@ const renderCheckBox = () => {
 
     activateSetting()
 }
-
-
-
-

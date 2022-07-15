@@ -161,10 +161,11 @@ body {
 }
 
 .mute {
-  width: 15px;
-  height: 15px;
-  background-size: 15px 15px;
-  background-image: url("../assets/img/mute.png");
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-image: url(../assets/img/mute.png);
+  filter: invert(1);
 }
 
 .weather {
@@ -208,6 +209,10 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
+  background: rgb(0,0,0,0.7);
+  border-radius: 20px;
+  padding: 10px;
+  z-index: 2;
 }
 
 .weather-error {
@@ -366,8 +371,6 @@ body {
 .volume-bar{
   width: 40%;
 }
-
-
 
 .play-list {
   margin-top: 10px;
