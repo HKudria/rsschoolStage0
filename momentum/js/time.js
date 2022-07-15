@@ -26,6 +26,12 @@ const checkHours = () => {
     }
 }
 
+const convertSecondToTime = (seconds) => {
+    let newDate = new Date(parseInt(seconds*1000))
+    const options = {minute: 'numeric', second: 'numeric'}
+    return newDate.toLocaleString(getLocale(), options)
+}
+
 //every hour we check date and welcome message
 const showTime = () => {
     const options = {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false}

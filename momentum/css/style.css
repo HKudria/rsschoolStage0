@@ -71,7 +71,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 120px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .play-list {
@@ -153,6 +153,20 @@ body {
   background-image: url("../assets/svg/play-next.svg");
 }
 
+.one-line{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0 5px;
+}
+
+.mute {
+  width: 15px;
+  height: 15px;
+  background-size: 15px 15px;
+  background-image: url("../assets/img/mute.png");
+}
+
 .weather {
   display: flex;
   flex-direction: column;
@@ -191,6 +205,9 @@ body {
 
 .player{
   transition: all 1s;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .weather-error {
@@ -330,6 +347,45 @@ body {
 
 .author {
   min-height: 20px;
+}
+
+.progress-bar, .volume-bar{
+  background-color: aliceblue;
+  opacity: 0.5;
+  height: 10px;
+  width: 100%;
+  margin: 0 5px 0 5px;
+}
+
+.progress-bar-status, .volume-bar-status{
+  height: 10px;
+  background-color: blue;
+  opacity: 0.8;
+}
+
+.volume-bar{
+  width: 40%;
+}
+
+
+
+.play-list {
+  margin-top: 10px;
+}
+
+.play-list a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.play-list li{
+  margin: 0;
+  list-style: none;
+  background-image: url("../assets/svg/play.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+  padding: 10px 0 5px 25px;
+
 }
 
 @media (max-width: 768px) {

@@ -9,8 +9,8 @@ const galleries = {
     evening: '185118123-72157720111880160'
 }
 const setDefaultBg = () => {
-    window.alert('Something wrong. Server isn\'t work!. Please try again later!')
     body.style.backgroundImage = 'url("./assets/img/bg.jpg")'
+    window.alert('Something wrong. We can\'t load images from flickr! Server isn\'t work!. Please try again later!')
 }
 
 const parsePhoto = async (partOfDay) => {
