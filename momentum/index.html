@@ -11,7 +11,7 @@
 </head>
 <body>
 <header class="header">
-    <div class="player">
+    <div class="player player-hide">
         <div class="player-controls">
             <button class="play-prev player-icon"></button>
             <button class="play player-icon"></button>
@@ -36,7 +36,7 @@
         <div class="checkBoxElement"></div>
         <img src="assets/img/gear.svg" id="showSetting">
     </div>
-    <div class="weather">
+    <div class="weather weather-hide">
         <input type="text" class="city"/>
         <i class="weather-icon owf"></i>
         <div class="weather-error"></div>
@@ -53,14 +53,14 @@
         <button class="slide-prev slider-icon"></button>
         <button class="slide-next slider-icon"></button>
     </div>
-    <time class="time"></time>
-    <date class="date"></date>
-    <div class="greeting-container">
+    <time class="time time-hide"></time>
+    <date class="date date-hide"></date>
+    <div class="greeting-container greeting-container-hide">
         <span class="greeting"></span>
         <input type="text" class="name" value=""/>
     </div>
 </main>
-<footer class="footer">
+<footer class="footer greeting-container-hide">
     <button class="change-quote"></button>
     <div>
         <div class="quote"></div>
