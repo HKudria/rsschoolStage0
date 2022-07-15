@@ -1,12 +1,11 @@
 const apiKeyWeather = '787add4f58135d5e11a67bc4b64a8e36'
-let city = getLocale()==='en'?'Minsk':'Минск'
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
 const weatherWind = document.querySelector('.wind');
 const weatherHumidity = document.querySelector('.humidity');
 const cityInput = document.querySelector('.city');
-cityInput.value = city
+cityInput.value = localStorage.getItem('city')
 
 
 const weatherError = () => {
@@ -19,7 +18,7 @@ const weatherError = () => {
 
 const parseWeather = async () => {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${getLocale()}&appid=${apiKeyWeather}&units=metric`)
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${localStorage.getItem('city')}&lang=${getLocale()}&appid=${apiKeyWeather}&units=metric`)
         return await response.json()
     } catch (err) {
        weatherError()
@@ -45,7 +44,7 @@ setWeather()
 
 cityInput.addEventListener('keydown',(e)=>{
     if (e.keyCode === 13) {
-        city = cityInput.value
+        localStorage.setItem('city', cityInput.value)
         setWeather()
     }
 })

@@ -41,8 +41,6 @@ const ruLocale = {
     choseLocal: 'Выберите язык',
     ru: 'Русский',
     en: 'Английский'
-
-
 }
 
 const checkBoxEl = document.querySelector('.checkBoxElement')
@@ -59,6 +57,8 @@ const getLocale = () => {
         getLocale()
     }
 }
+
+if(!localStorage.getItem('city')) localStorage.setItem('city', getLocale()==='en'?'Minsk':'Минск')
 
 let local = getLocale()==='en'?enLocale:ruLocale
 
