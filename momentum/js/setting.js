@@ -22,7 +22,7 @@ const activateSetting = () =>{
         blockWeather.classList.remove('weather-hide')
     }
 
-    if (!localStorage.getItem('weather')){
+    if (!localStorage.getItem('time')){
         timeRender.classList.add('time-hide')
     } else {
         timeRender.classList.remove('time-hide')
@@ -32,14 +32,6 @@ const activateSetting = () =>{
         dateRender.classList.add('date-hide')
     } else {
         dateRender.classList.remove('date-hide')
-    }
-
-    const setLocalStorageSetting = (item) => {
-        if (localStorage.getItem(item)) {
-            localStorage.setItem(item, '')
-        } else {
-            localStorage.setItem(item, 'checked')
-        }
     }
 
     if (!localStorage.getItem('greeting')){
@@ -58,6 +50,14 @@ const activateSetting = () =>{
         blockPlayer.classList.add('player-hide')
     } else {
         blockPlayer.classList.remove('player-hide')
+    }
+
+    const setLocalStorageSetting = (item) => {
+        if (localStorage.getItem(item)) {
+            localStorage.setItem(item, '')
+        } else {
+            localStorage.setItem(item, 'checked')
+        }
     }
 
     settingWeather.addEventListener('change', (e) => {
