@@ -11,6 +11,7 @@ const currentSongTime = document.querySelector('#current-song-time')
 const fullSongTime = document.querySelector('#full-song-time')
 const actualSongTitle = document.querySelector('#actualSong')
 const muteButton = document.querySelector('.mute')
+let liGetSong
 
 let timer
 let actualSongId = 0
@@ -47,7 +48,6 @@ const checkSongEnd = () => {
 }
 
 const paused = () => {
-
     if (activeSong.paused) {
         activeSong.play()
         play.classList.add('pause')
@@ -79,10 +79,29 @@ const createPlaySong = (id) => {
 
 const initialEventPlay = () => {
     const getSong = document.querySelectorAll('.songItem')
+    liGetSong = document.querySelectorAll('.songItemLi')
     for (let i = 0; i < getSong.length; i++) {
-        getSong[i].addEventListener("click", function () {
-            createPlaySong(getSong[i].id.replace('song-', ''))
+        if(i === actualSongId){
+            getSong[actualSongId].classList.add('player-active-song')
+        }
+        liGetSong[i].addEventListener("click", function () {
+            let LiSongId = liGetSong[i].id.replace('li-song-', '')
+            for (let i = 0; i < getSong.length; i++) {
+                getSong[i].classList.remove('player-active-song')
+                liGetSong[i].classList.remove('played')
+            }
+            getSong[LiSongId].classList.add('player-active-song')
+
+            if(LiSongId !== actualSongId){
+                createPlaySong(LiSongId)
+            } else {
+                paused()
+            }
+            if(!activeSong.paused) {
+                liGetSong[i].classList.add('played')
+            }
         });
+
     }
 }
 
@@ -98,7 +117,7 @@ const renderPlayerList = () => {
     progressBarStatus.style.cssText += 'width:0%'
     renderVolumeBar()
     for (let i = 0; i < musicList.length; i++) {
-        playerList.innerHTML += `<li><a href="#" class="songItem" id="song-${i}">${musicList[i]}</a></li>`
+        playerList.innerHTML += `<li class="songItemLi" id="li-song-${i}"><a href="#" class="songItem">${musicList[i]}</a></li>`
     }
     initialEventPlay()
 }

@@ -12,16 +12,19 @@ const weatherError = () => {
     weatherIcon.className = ''
     temperature.textContent = local.errorServer
     weatherDescription.textContent = local.errorTry
-    weatherWind.textContent = local.wind
-    weatherHumidity.textContent = local.hum
+    weatherWind.textContent = ''
+    weatherHumidity.textContent = ''
 }
 
 const parseWeather = async () => {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${localStorage.getItem('city')}&lang=${getLocale()}&appid=${apiKeyWeather}&units=metric`)
+        if (response.status !== 200) {
+            throw new Error()
+        }
         return await response.json()
     } catch (err) {
-       weatherError()
+        weatherError()
         return null
     }
 }
@@ -42,7 +45,7 @@ const setWeather = () => {
 
 setWeather()
 
-cityInput.addEventListener('keydown',(e)=>{
+cityInput.addEventListener('keydown', (e) => {
     if (e.keyCode === 13) {
         localStorage.setItem('city', cityInput.value)
         setWeather()

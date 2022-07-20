@@ -2,6 +2,7 @@ const body = document.querySelector('body')
 const slidePrev = document.querySelector('.slide-prev')
 const slideNext = document.querySelector('.slide-next')
 const apiKey = '62f2f7933d6ddd07985e3fc39c0b983c'
+let firstVisit = false
 const galleries = {
     night: '185118123-72157720062587146',
     morning: '185118123-72157720069530982',
@@ -9,7 +10,6 @@ const galleries = {
     evening: '185118123-72157720111880160'
 }
 const setDefaultBg = () => {
-    body.style.backgroundImage = 'url("./assets/img/bg.jpg")'
     window.alert('Something wrong. We can\'t load images from flickr! Server isn\'t work!. Please try again later!')
 }
 
@@ -24,7 +24,12 @@ const parsePhoto = async (partOfDay) => {
 }
 
 const getBgCounter = () => {
-    return parseInt(localStorage.getItem('bgCounter')) || 0
+    if(!firstVisit){
+        localStorage.setItem('bgCounter', (Math.random()*15).toString())
+        firstVisit = true;
+    }
+
+    return parseInt(localStorage.getItem('bgCounter'))
 }
 
 const setBG = () => {

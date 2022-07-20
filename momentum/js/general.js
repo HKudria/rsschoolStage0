@@ -6,8 +6,8 @@ const userConfig = {
 const enLocale = {
     wind: 'Wind speed ',
     hum: 'Humidity ',
-    errorServer: 'Sorry, server is not available.',
-    errorTry: 'Please try again later',
+    errorServer: 'Sorry, we can\'t load data.',
+    errorTry: 'Please try again later or check your input data',
     message: ['Good night','Good morning','Good afternoon','Good evening'],
     placeholder: '[Enter name]',
     ms: 'm/s',
@@ -26,8 +26,8 @@ const enLocale = {
 const ruLocale = {
     wind: 'Скорость ветра ',
     hum: 'Влажнасть ',
-    errorServer: 'Извините, сервер не доступен. ',
-    errorTry: 'Пожалуйста попробуйте позже',
+    errorServer: 'Извините, мы не можем загрузить данные. ',
+    errorTry: 'Пожалуйста попробуйте позже или проверьте правильность введеных данных',
     message: ['Доброй ночи','Доброе утро','Добрый день','Добрый вечер'],
     placeholder: '[Введите имя]',
     ms: 'м/с',

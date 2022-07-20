@@ -16,6 +16,7 @@ body {
   font-size: 16px;
   color: #fff;
   text-align: center;
+  background-image: url("./assets/img/bg.jpg");
   background: center/cover, rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   transition: all 1s ease-in-out;
@@ -86,6 +87,10 @@ body {
   opacity: .8;
   cursor: pointer;
   transition: .3s;
+}
+
+.player-active-song{
+  text-decoration: underline !important;
 }
 
 .play-item:hover {
@@ -388,7 +393,11 @@ body {
   background-position: left center;
   background-size: 20px;
   padding: 10px 0 5px 25px;
+}
 
+
+.played {
+  background-image: url("../assets/svg/pause.svg") !important;
 }
 
 @media (max-width: 768px) {
