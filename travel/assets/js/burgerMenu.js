@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     body.addEventListener('click', closeMenu)
 
     function closeMenu(event) {
-        if (event.target.tagName === 'DIV' || event.target.tagName === 'IMG' || event.target.textContent === 'account') {
+        if (event.target.tagName !== 'NAV') {
             burgerMenu.classList.remove('open')
             window.setTimeout(showMenu, 800)
 
