@@ -1,16 +1,19 @@
 <!doctype html>
 <html lang="zxx">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/x-icon" href="public/img/favicon.ico">
     <link rel="stylesheet" href="./assets/style/style.css">
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/carousel.js"></script>
+    <script src="./assets/js/popupMenu.js"></script>
+    <script src="./assets/js/burgerMenu.js"></script>
     <title>Travel Portal</title>
 </head>
 <body>
-<header >
+<header>
     <nav>
         <div class="logo">
             <img src="./public/img/travel.svg" alt="logo">
@@ -25,9 +28,9 @@
             </ul>
         </div>
         <div class="login-button">
-            <button>Login</button>
+            <button id="popupMenu">Login</button>
         </div>
-        <div class="responsive-nav" >
+        <div class="responsive-nav">
             <img src="./public/img/responsive_nav.svg" alt="logo" id="openBurgerMenu">
         </div>
     </nav>
@@ -35,32 +38,58 @@
         <div class="menu" id="burgerMenu">
             <img src="./public/img/close.svg" alt="closeMenu" class="closeButton" id="closeBurgerMenu">
             <nav class="burgerNavigation">
-            <ul>
-                <li><a href="#howItWorks">how it works</a></li>
-                <li><a href="#planYouTrip">plan you trip</a></li>
-                <li><a href="#destinations">destinations</a></li>
-                <li><a href="#travelStories">travel stories</a></li>
-                <li><a  href="javascript:(e)=>closeMenu(e)">account</a></li>
-                <li><a href="#socMedia">Social media</a></li>
-            </ul>
+                <ul>
+                    <li><a href="#howItWorks">how it works</a></li>
+                    <li><a href="#planYouTrip">plan you trip</a></li>
+                    <li><a href="#destinations">destinations</a></li>
+                    <li><a href="#travelStories">travel stories</a></li>
+                    <li><a href="#accountButton" id="accountButton">account</a></li>
+                    <li><a href="#socMedia">Social media</a></li>
+                </ul>
             </nav>
         </div>
-
     </div>
-    <script src="./assets/js/burgerMenu.js"></script>
+    <div class="popup">
+        <div class="popup-frame">
+            <h2>Log in to your account</h2>
+            <button class="facebookButton"><img src="public/img/FacebookLogo.svg" alt="FacebookLogo">Sing In with
+                Facebook
+            </button>
+            <button class="googleButton"><img src="public/img/GoogleLogo.svg" alt="GoogleLogo">Sing In with Google
+            </button>
+            <div class="lineOr">
+                <hr>
+                <span> or </span>
+                <hr>
+            </div>
+            <form class="popupForm">
+                <ul>
+                    <li><label for="formEmail">E-mail</label></li>
+                    <li><input type="text" id="formEmail" autocomplete="username"></li>
+                    <li><label for="formPassword">Password</label></li>
+                    <li><input type="password" id="formPassword" autocomplete="current-password"></li>
+                    <li>
+                        <button type="submit" class="singInButton">Sing In</button>
+                    </li>
+                </ul>
+            </form>
+            <a href="">Forgot Your Password?</a>
+            <hr class="betweenLinks">
+            <span>Don't have an account? <a href="#registerButton" id="registerButton">Register</a></span>
+        </div>
+    </div>
 </header>
 <main>
     <section class="preview" id="howItWorks">
         <div class="preview-content">
             <h1 class="main-text">Explore the beauty of the World</h1>
-            <span class="description-text">Recieve personalized recommendations for countries, hotels, activities and more</span>
+            <span class="description-text">Receive personalized recommendations for countries, hotels, activities and more</span>
             <div class="search-bar">
                 <input placeholder="What would you like to do?">
                 <button>Start Planning</button>
             </div>
         </div>
     </section>
-
     <section class="steps" id="planYouTrip">
         <h2>3 STEPS TO THE PERFECT TRIP</h2>
         <div class="steps-main-block">
@@ -80,32 +109,31 @@
     </section>
     <section class="destination" id="destinations">
         <div class="destination-navigation">
-            <img src="public/img/nav-arrow-left.svg" alt="slideLeft">
-            <img src="public/img/nav-arrow-right.svg" alt="slideRight">
+            <img src="public/img/nav-arrow-left.svg" alt="slideLeft" id="arrow-left">
+            <img src="public/img/nav-arrow-right.svg" alt="slideRight" id="arrow-right">
         </div>
         <h2>POPULAR DESTINATIONS</h2>
-        <div class="destination-frame">
-            <div class="destination-section order1">
+        <div class="destination-frame" id="carousel">
+            <div class="destination-section order1" id="img-left">
                 <span>SPAIN</span>
                 <img src="public/img/island.jpg" alt="SPAIN">
             </div>
             <div class="destination-section order2">
                 <span>japan</span>
-                <img src="public/img/japan.jpg" alt="JAPAN">
+                <img src="public/img/japan.jpg" alt="JAPAN" id="carouselData">
             </div>
-            <div class="destination-section">
+            <div class="destination-section" id="img-right">
                 <span>USA</span>
                 <img src="public/img/usa.jpg" alt="USA">
             </div>
         </div>
         <div class="destination-nav">
-            <span id="spain" class="order2"></span>
-           <span class="active order1" id="japan"></span>
-           <span id="usa" class="order2"></span>
+            <span id="spain"></span>
+            <span class="active" id="japan"></span>
+            <span id="usa"></span>
         </div>
         <button class="button-arrow"><span><img src="public/img/arrow.svg" alt="arrow">Find More</span></button>
     </section>
-
     <section class="stories" id="travelStories">
         <div class=story-fill>
             <div class="story-block">
@@ -189,8 +217,10 @@
 <footer id="socMedia">
     <span>All Rights Reserved © Travel Portal</span>
     <ul>
-        <li><a href="https://github.com/HKudria"><img src="public/img/github-icon.svg" alt="github" class="invert"></a></li>
-        <li><a href="https://rs.school/js-stage0/"><img src="public/img/rs_school_js.svg" alt="RS School" class="invert"></a></li>
+        <li><a href="https://github.com/HKudria"><img src="public/img/github-icon.svg" alt="github" class="invert"></a>
+        </li>
+        <li><a href="https://rs.school/js-stage0/"><img src="public/img/rs_school_js.svg" alt="RS School"
+                                                        class="invert"></a></li>
         <li><a href=""><img src="public/img/akar-icons_instagram-fill.svg" alt="instagram"></a></li>
         <li><a href=""><img src="public/img/akar-icons_video.svg" alt="youtube"></a></li>
         <li><a href=""><img src="public/img/akar-icons_twitter-fill.svg" alt="twitter"></a></li>
